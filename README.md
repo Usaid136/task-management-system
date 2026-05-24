@@ -2,7 +2,7 @@ Here’s your **fully updated, professional README.md** based on your actual pro
 
 ---
 
-# To-Do List Management System (PHP & MySQL)
+# Task Management System (PHP & MySQL)
 
 A powerful and user-friendly **task management system** built with **PHP, MySQL, and Bootstrap**.
 This system is designed for multiple users with authentication, dashboards, analytics, and advanced task management features.
