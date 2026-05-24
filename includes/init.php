@@ -2,7 +2,7 @@
 session_start();  // Starts Session
 
 
-define("BASE_URL", "http://localhost/to_do_list/");   // Base URL
+define("BASE_URL", "http://localhost/task-management-system/");   // Base URL
 
 require_once "db.php"; // Include Database File
 
