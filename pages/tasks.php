@@ -84,8 +84,41 @@ $result = mysqli_stmt_get_result($stmt);
 
 
 // Count Tasks
-$countStmt = mysqli_prepare($conn, "SELECT COUNT(*) AS total_tasks FROM tasks WHERE user_id = ?");
-mysqli_stmt_bind_param($countStmt, "i", $user_id);
+
+$countParams = [];
+$countTypes = "";
+
+// Count Query
+$countQuery = "SELECT COUNT(*) AS total_tasks FROM tasks WHERE user_id = ?";
+$countParams[] = $user_id;
+$countTypes .= "i";
+
+// Search Count Query
+if (!empty($search)) {
+    $countQuery .= " AND (title LIKE ? OR description LIKE ?)";
+    $searchParam = "%$search%";
+    $countParams[] = $searchParam;
+    $countParams[] = $searchParam;
+    $countTypes .= "ss";
+}
+
+// Filter Status Count Query
+if (!empty($filter_status)) {
+    $countQuery .= " AND status = ?";
+    $countParams[] = $filter_status;
+    $countTypes .= "s";
+}
+
+// Filter Priority Count Query
+if (!empty($filter_priority)) {
+    $countQuery .= " AND priority = ?";
+    $countParams[] = $filter_priority;
+    $countTypes .= "s";
+}
+
+
+$countStmt = mysqli_prepare($conn, $countQuery);
+mysqli_stmt_bind_param($countStmt, $countTypes, ...$countParams);
 mysqli_stmt_execute($countStmt);
 $countResult = mysqli_stmt_get_result($countStmt);
 
@@ -99,7 +132,7 @@ $totalPages = ceil($totalTasks / $limit);
         <div class="card-body">
             <!-- Header -->
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-2 mb-3">
-                <h1 class="mt-3 mb-0">To-Do List</h1>
+                <h1 class="mt-3 mb-0">Tasks List</h1>
 
                 <a class="btn btn-outline-primary align-self-start align-item-md-auto"
                     href="add_task.php">
