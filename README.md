@@ -120,6 +120,13 @@ config/db.php
 ```
 http://localhost/task-management-system
 ```
+---
+
+## Demo
+
+Watch the project demo here:
+
+Youtube: https://youtu.be/er_OuECL-ZY
 
 ---
 
