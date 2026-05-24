@@ -1,7 +1,3 @@
-Here’s your **fully updated, professional README.md** based on your actual project features. You can copy-paste this directly into GitHub:
-
----
-
 # Task Management System (PHP & MySQL)
 
 A powerful and user-friendly **task management system** built with **PHP, MySQL, and Bootstrap**.
@@ -75,7 +71,7 @@ This system is designed for multiple users with authentication, dashboards, anal
 ## Project Structure
 
 ```
-/to-do-list-system
+/task-management-system
 │── /config
 │── /includes
 │── /assets
@@ -98,7 +94,7 @@ This system is designed for multiple users with authentication, dashboards, anal
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/to-do-list-system.git
+git clone https://github.com/Usaid136/task-management-system-php.git
 ```
 
 2. Move project to XAMPP `htdocs`:
@@ -122,7 +118,7 @@ config/db.php
 5. Run the project:
 
 ```
-http://localhost/to-do-list-system
+http://localhost/task-management-system
 ```
 
 ---
