@@ -1,7 +1,7 @@
 <?php
-include "../includes/auth_init.php"; // Include Auth Init File
+include "../includes/auth_init.php";
 
-include "../layout/header.php"; // Include Header File
+include "../layout/header.php";
 
 /** @var mysqli $conn */
 
