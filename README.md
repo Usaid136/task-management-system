@@ -94,7 +94,7 @@ This system is designed for multiple users with authentication, dashboards, anal
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Usaid136/task-management-system-php.git
+git clone https://github.com/Usaid136/task-management-system.git
 ```
 
 2. Move project to XAMPP `htdocs`:
