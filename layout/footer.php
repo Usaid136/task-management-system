@@ -64,7 +64,8 @@
         <!-- Bottom Bar -->
         <div class="text-center">
             <small>
-                &copy; <?= date('Y'); ?> Task Management System. All Rights Reserved.
+                &copy; <?= date('Y'); ?> Task Management System. All Rights Reserved. Developed by M. Usaid.
+
             </small>
         </div>
     </div>
